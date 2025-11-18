@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <link rel="stylesheet" href="style.css">
+  <title>Weather</title>
+</head>
+<body>
+  <div>
+    <header>
+      <div>
+        <h1>Weather</h1>
+        <p>Fetches current weather by city. Uses Open‑Meteo geocoding + weather APIs.</p>
+      </div>
+    </header>
+
+    <div>
+        <input id="q" type="search" placeholder="Enter city (e.g., Mumbai, London)" value="Mumbai" />
+        <button id="searchBtn">Search</button>
+        <button id="locBtn" class="secondary">Use my location</button>
+      </div>
+
+      <div class="grid">
+        <div class="main">
+          <div id="output">
+            <p class="small">Enter a city and click <strong>Search</strong> — or use your device location.</p>
+          </div>
+        </div>
+
+        <aside class="sidebar">
+          <div><strong>Recent searches</strong></div>
+          <ul id="recent" class="list"></ul>
+          <hr style="border:none;border-top:1px solid rgba(255,255,255,0.03);margin:10px 0">
+        </aside>
+      </div>
+
+      <div id="error" style="display:none" class="error"></div>
+      <footer>Tip: try cities like <em>New York</em>, <em>Tokyo</em>, or <em>Paris</em>.</footer>
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
